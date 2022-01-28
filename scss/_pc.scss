@@ -1,0 +1,300 @@
+#section0{
+    background: url('../images/main_img.png') no-repeat center 70vh/60vh;
+
+    .header{
+        z-index: 9999999;
+        width:75%;
+        margin:0 auto;
+        position: absolute;
+        top:0;
+        left:50%; transform: translateX(-50%);
+        height:8vh;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: nowrap;
+        h1.logo{
+            width:15%;
+            img{width:100%; margin-top:1vh;}
+        }
+        .gnb{
+            width:85%;
+            display: flex;
+            justify-content: space-between;
+            align-content: flex-start;
+            flex-wrap: nowrap;
+            &>li{
+                text-align: center;
+                width:100%;
+                position: relative;
+                &>a{
+                    height:80px;
+                    line-height: 80px;
+                    text-align: center;
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    transition: all .4s;
+                }
+            }
+        }
+        .util{
+            display: flex;
+            align-content: center;
+            justify-content: space-around;
+            &>a{
+                display: block;
+                align-items: center;
+                width:5vh;
+                img{
+                    width:80%; margin-top:2vh;
+                }
+            }
+        }
+        .submenu{
+            background: rgba(255,255,255,0.8);
+            position:absolute;
+            width:100%;
+            display: none;
+            &>li{
+                &>a{
+                    height:80px;
+                    line-height: 80px;
+                    text-align: center;
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    transition: all .4s;
+                }
+            }
+        }
+        .gnb a:hover{
+            font-weight: 700;
+            transition: all .4s;
+            font-size: 1.1rem;
+        }
+    }
+    .text_wrap{
+        position: absolute;
+        top:25vh;
+        left:50vw;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 1;
+        .main_text{
+            font-size:6vw;
+            line-height: 6rem; /*수정..*/
+            font-family: 'Nanum Myeongjo';
+            text-transform: uppercase;
+        }
+        .sub_text{
+            font-size:2.5vw;
+            line-height: 6rem;
+            font-family: 'Sacramento', cursive;
+        }
+    }
+}
+
+#section1{
+    background: url('../images/main_img.png') no-repeat center -30vh/60vh,
+    url('../images/bg.png') repeat center center/10vw;
+    .signiture_menu{
+        width:65vw;
+        margin-top:-6vh;
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        background: white;
+        padding:40px 40px 30px;
+        text-align: center;
+        border:2px solid $font_color;
+        display: flex;
+        flex-wrap:wrap;
+        box-sizing: border-box;
+        &>h2{
+            font-size: 2.5rem;
+            width:100%;
+        }
+        &>div{
+            width:35%;
+            margin-left:10%;
+            h4{width:100%;}
+            &>ul>li{
+                margin:10px auto;
+                text-align:justify;
+                font-size:1.2rem;
+                &>span{
+                    display: inline-block;
+                    width:80%;
+                }
+            }
+        }
+    }
+}
+
+#section2{
+    h2{
+        font-size: 2.5rem;
+        width:100%;
+        text-align:center;
+        margin:-50px 0 70px 0px; /*위치조절용 마진값*/
+    }
+    .slideWrap{
+        width:83.33333%; /*1600px / 1920px * 100 기준.*/
+        height:600px;
+        margin: 0 auto;
+        position:relative;
+        overflow:hidden;
+        .btn_warp{
+            position:absolute;
+            top:50%;
+            transform: translateY(-50%);
+            width:100%;
+            &>span{
+                display: block;
+                width:40px;
+                height:180px;
+                background:url('') no-repeat center center/40px;
+                cursor: pointer;
+                &.prev{
+                  background-image: url('../images/arrow_prev.png'); 
+                  float: left; 
+                }
+                &.next{
+                    background-image: url('../images/arrow_next.png'); 
+                    float: right; 
+                }
+            }
+            &::after{
+                content:'';
+                display:block;
+                clear:both;
+                width:0; height:0;
+                visibility:hidden;
+            }
+        }
+    }
+    .slideShow{
+        width:175%; /*2800px*/
+        margin:0 auto;
+        height:600px;
+        left:0;
+        position:absolute;
+
+        &::after{
+            content:'';
+            display:block;
+            clear:both;
+            width:0; height:0;
+            visibility:hidden;
+        }
+        .setmenu{
+            float:left;
+            background:#fffed1;
+            box-sizing: border-box;
+            border:2px solid $font_color;
+            width:15%; /*420px*/
+            height:600px;
+            padding:20px;
+            text-align:center;
+            margin-right:3.214285714285714%;/*90px*/
+            &:nth-of-type(1){
+                margin-left:3.214285714285714%;
+            }
+            h3{font-size: 1.8rem;}
+            &>li{
+                margin:25px 0px;
+                &:nth-last-child(2){
+                    margin-top:40px;
+                }
+            }
+            span.line{
+                display: inline-block;
+                width:10%;
+                height:2px;
+                background: $font_color;
+            }
+            .res_btn{
+                display: inline-block;
+                padding:10px 60px;
+                background: $font_color;
+                color:white;
+                cursor:pointer;
+                border:2px solid $font_color;
+                box-sizing: border-box;
+                font-weight: 600;
+                border-radius: 50px;
+                &:hover{
+                    background-color: transparent;
+                    color:$font_color;
+                    border:2px solid $font_color;
+                    box-sizing: border-box;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+#section3{
+    article{
+        width:50vw;
+        height:50vh;
+        float:left;
+        &.arti1{ background:url('../images/strawberry.png') no-repeat center center/40% #ffffcc;}
+        &.arti2,&.arti3{
+            box-sizing: border-box;
+            padding:5vh 8vw;
+            background:#f3f5c9;
+            overflow: hidden;
+            h4{font-size: 2rem; margin-bottom: 1.5vh;}
+            p{font-size:1rem; line-height: 1.8rem;}            
+        }
+        &.arti4{
+            background:url('../images/waffle.png') no-repeat center center/40% #a8c6ca;
+        }
+    }
+    &::after{
+        content:'';
+        display:block;
+        clear:both;
+        width:0; height:0;
+        visibility:hidden;
+    }
+}
+
+#section4{
+    background: #ffffee;
+    .sec_wrap{
+        position:relative;
+        width:60vw;
+        margin:0 auto;
+        h3{font-size:3rem; margin-bottom:60px;}
+        p{
+            font-size:1.5rem; font-weight: 300;
+            line-height: 3rem;
+            letter-spacing: 1px;
+        }
+        img{
+            position:absolute;
+            &.biscuit{ width:16%;bottom:15%;right:26%;}
+            &.teacup{ width:12%;bottom:10%;right:23%;}
+            &.teapot{
+                width: 23%; bottom:18%; right:5%;
+                transform: rotate(-30deg);
+                animation-name:potmoving;
+                animation-iteration-count: infinite;
+                animation-duration: 1.5s;
+            }
+        }
+    }
+    .copyright{
+        position:absolute;
+        bottom:0;
+        background: #a8baca;
+        height:50px;
+        line-height:50px;
+        text-align:center;
+        width:100%;
+    }
+}

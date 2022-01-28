@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Sacramento&display=swap');
+
+/*
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Sacramento', cursive;
+*/
+
+/*
+ fullpage 플러그인 설치 후 
+ 각 섹션(페이지)마다 position:relative가 적용되어 있음.
+ 그 안에 들어가는 ㅏ요소들은 position:absolute를 이용해서 위치를 잡아 줄 수 있음.
+*/
+
+/*
+사이즈 관련 단위..
+ 보통 많이 사용 했던게 : px, %, em, rem..
+
+ vw : 뷰포트 사이즈의 가로 길이
+   1~100: 뷰포트에서 지정된 사이즈 기준. 
+ vh : 뷰포트 사이즈의 세로 길이
+    1~100: 뷰포트에서 지정된 사이즈 기준
+     @media..  (max-width:100px)
+      -> 1vw = 뷰포트 너비의 1%
+        만약에 뷰포트 높이가 500px
+      -> 100vh = 뷰포트 높이의 1% = 500px
+*/
+$font_color:#1d4c8b;
+*{margin:0; padding:0; list-style:none;}
+html{
+    font-size:1.5vh;
+    font-family: 'Poppins', 'Noto Sans KR',  sans-serif;
+    color:$font_color;
+}
+a,a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+    color:$font_color;
+}
+@keyframes potmoving{ 
+    0%{transform: rotate(-30deg);}
+    50%{transform: rotate(-10deg);}
+    100%{transform: rotate(-30deg);}
+}
